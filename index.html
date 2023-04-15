@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--displays on tab in browser-->
+  <title>Rock, Paper, Scissors</title>
+  <!--links to css file-->
+  <link rel="stylesheet" href="styles.css">
+  <!--links to javascript file-->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!--3 selection buttons for user input, draws config from css-->
+  <div class="selections">
+    <!--allows us to see which button is selected, document.querySelectorAll in the js file-->
+    <button class="selection" data-selection="rock">✊</button>
+    <button class="selection" data-selection="paper">✋</button>
+    <button class="selection" data-selection="scissors">✌</button>
+  </div>
+  <!--displays players and score accumulation, draws config from css-->
+  <div class="results">
+    <div>
+      You
+      <span class="result-score" data-your-score>0</span>
+    </div>
+    <div data-final-column>
+      Computer
+      <span class="result-score" data-computer-score>0</span>
+    </div>
+    <!-- this segment of code was written during design layout phase, replaced with script 
+      <div class="result-selection winner">✊</div>
+      <div class="result-selection">✌</div> -->
+  </div>
+</body>
+</html>

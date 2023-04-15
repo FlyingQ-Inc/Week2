@@ -1,0 +1,60 @@
+/*used my background settings from first week assignment*/
+body {
+    background-image: linear-gradient(to right, rgba(112, 38, 109, 0.2), rgba(112, 38, 109, 0.9));
+}
+
+.selections {
+    /*Flexbox is used to build layout in one dimension, row or column. Makes it easier to design flexible layout structure without float or positioning.
+    Using flex here, parent container, child containers automatically enable flex content.*/
+    display: flex;
+    /*centers play buttons*/
+    justify-content: center;
+}
+
+.selection {
+    /*removes background, border and outline from emojis used for buttons*/
+    background: none;
+    border: none;
+    outline: none;
+    /*transforms mouse to pointer on hover*/
+    cursor: pointer;
+    /*Rem is short for "root-em", dictates an element's font size relative to the size of the root element. Most browsers default to 16px.*/
+    font-size: 4rem;
+    /*slows transition of hover effect*/
+    transition: 100ms;
+}
+
+.selection:hover {
+    /*causes emoji button to increase size on hover*/
+    transform: scale(1.2);
+}
+
+.results {
+    /*margin here gives space between the buttons and results*/
+    color: rgb(23, 34, 23);
+    font: bold;
+    margin-top: 2rem;
+    font-size: 2rem;
+    /*rather than the flex used earlier, allows for layout in two dimensions*/
+    display: grid;
+    justify-content: center;
+    /* 1 fr makes both columns same size*/
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+/*makes the score a little smaller than text for players, margin provides some space between the two*/
+.result-score {
+    margin-left: .1rem;
+    font-size: .9rem;
+    color: #313030;
+}
+/*the idea here is that the winning result will appear brighter and larger than the losing display.*/
+.result-selection {
+    opacity: .5;
+}
+
+.result-selection.winner {
+    opacity: 1;
+    font-size: 1.75rem;
+}
